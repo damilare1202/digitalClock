@@ -1,0 +1,22 @@
+h1 {
+    color: blue;
+    text-align: center;
+    font-size: 50px;
+}
+
+h6 {
+    text-align: end;
+    color: rgb(0, 255, 13);
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background: red;
+}
+
+@media (max-width: 768px) {
+    .box {
+        background: blue;
+    }
+}
