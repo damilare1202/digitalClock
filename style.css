@@ -12,7 +12,6 @@ h6 {
 .box {
     width: 100px;
     height: 50px;
-    background: red;
 }
 
 @media (min-width: 320px) and(max-width: 480px) {
