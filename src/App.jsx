@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from "react";
+import './styles.css';
+
+export default function App() {
+  return <div className="container">Resize me!</div>;
+}
 
 export default function DigitalClock() {
   const [time, setTime] = useState(new Date());
