@@ -35,7 +35,7 @@
   }
 }
 
-/* 📱 Even smaller screens (small phones) */
+/* Smaller screens (small phones) */
 @media (max-width: 480px) {
   .clock-container {
     width: 95%;
