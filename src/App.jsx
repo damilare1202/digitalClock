@@ -1,18 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
-export default function App() {
-  return <div className="container">Responsive Box</div>;
-}
-export default function DigitalClock() {
+function DigitalClock() {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
     const timer = setInterval(() => {
       setTime(new Date());
     }, 1000);
-
-    return () => clearInterval(timer); // cleanup
+    return () => clearInterval(timer);
   }, []);
 
   const formatTime = (date) => {
@@ -20,7 +16,6 @@ export default function DigitalClock() {
     let minutes = date.getMinutes();
     let seconds = date.getSeconds();
 
-    // Pad with leading zeros if needed
     hours = hours.toString().padStart(2, "0");
     minutes = minutes.toString().padStart(2, "0");
     seconds = seconds.toString().padStart(2, "0");
@@ -29,27 +24,16 @@ export default function DigitalClock() {
   };
 
   return (
-    <div style={styles.container}>
-      <h1 style={styles.clock}>{formatTime(time)}</h1>
+    <div className="clock-container">
+      <h1 className="clock">{formatTime(time)}</h1>
     </div>
   );
-
 }
 
-const styles = {
-  container: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "300px",
-    width: "600px",
-    background: "linear-gradient(to right, red, pink, blue)",
-    marginLeft: "350px",
-    marginTop: "150px"
-  },
-  clock: {
-    fontSize: "4rem",
-    fontFamily: "monospace",
-    color: "#0f0",
-  },
-};
+export default function App() {
+  return (
+    <div className="container">
+      <DigitalClock />
+    </div>
+  );
+}

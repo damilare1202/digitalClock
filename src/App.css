@@ -1,0 +1,48 @@
+/* General container styling */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+/* Digital clock box */
+.clock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 300px;
+  border-radius: 20px;
+  background: linear-gradient(to right, red, pink, blue);
+}
+
+.clock {
+  color: #0f0;
+  font-size: 4rem;
+  font-family: monospace;
+}
+
+/* 📱 Responsive for phones */
+@media (max-width: 768px) {
+  .clock-container {
+    width: 90%;
+    height: 200px;
+  }
+
+  .clock {
+    font-size: 2.5rem;
+  }
+}
+
+/* 📱 Even smaller screens (small phones) */
+@media (max-width: 480px) {
+  .clock-container {
+    width: 95%;
+    height: 150px;
+  }
+
+  .clock {
+    font-size: 2rem;
+  }
+}
